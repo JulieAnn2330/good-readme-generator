@@ -52,9 +52,38 @@ const fs = require('fs');
 console.log("Welcome to the Good README Generator. Simply answer the next series of questions to generate a top-notch README.");
 
 // array of questions for user
-const questions = [
+//const questions = [ 
 
-];
+//];
+
+inquirer.prompt([
+     {
+     type: 'input',
+     title: 'title',
+     message: '1. What is the title of your project?',
+     },
+     {
+     type: 'input',
+     title: 'motivation', 
+     message: '2. What was the motivation for creating this project?',
+     },
+     {
+     type: 'input',
+     title: 'build',
+     message: '3. Why did you build this project?',
+     },
+     {
+     type: 'input',
+     title: 'problem',
+     message: '4. What problem does it solve?',
+     },
+     {
+     type: 'input',
+     title: 'learn',
+     message: '5. What did you learn from this project?',
+     },
+
+])
 
 // function to write README file
 function writeToFile(fileName, data) {
