@@ -48,13 +48,25 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 
 console.log("Welcome to the Good README Generator. Simply answer the next series of questions to generate a top-notch README.");
 
 // array of questions for user
-//const questions = [ 
+/*const questions = [ '1. What is the title of your project?',
+'2. What was the motivation for creating this project?',
+'3. Why did you build this project?',
+'4. What problem does it solve?',
+'5. What did you learn from this project?',
+'6. What makes your project stand out?',
+'7. What features does your project have?',
+'8. What is your GitHub username?',
+'9. What license would you prefer to use? (Choose from list)'
+];
 
-//];
+questions.forEach(element => {
+     console.log(element)
+})*/
 
 inquirer.prompt([
      {
@@ -82,17 +94,69 @@ inquirer.prompt([
      name: 'learn',
      message: '5. What did you learn from this project?',
      },
-
+     {
+     type: 'input',
+     name: 'standOut',
+     message: '6. What makes your project stand out?',
+     },
+     {
+     type: 'input',
+     name: 'features',
+     message: '7. What features does your project have?',
+     },
+     {
+     type: 'input',
+     name: 'git',
+     message: '8. What is your GitHub username?',
+     },
+     {
+     type: 'list',
+     message: "9. Which license would you prefer to use? (Choose from list)",
+     name: 'license',
+     choices:[
+     'MIT',
+     'Apache License 2.0',
+     'Boost Software License 1.0',
+     'The Unlicense', 
+     'GNU AGPLv3', 
+     'WTFPL',
+     ],     
+     }
 ])
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+.then(answers => {
+     console.info(answers.title);
+     console.info(answers.motivation);
+     console.info(answers.build);
+     console.info(answers.problem);
+     console.info(answers.learn);
+     console.info(answers.standOut);
+     console.info(answers.features);
+     console.info(answers.git);
+     console.info(answers.license);
+})
+
+/*fs.writeFile("log.txt", JSON.stringify(answers), function(err) {
+
+     if (err) {
+       return console.log(err);
+     }
+   
+     console.log("Success!");
+   
+   });*/
+   
+
+
+function writeToFile(fileName, answers) {
+        }
 
 // function to initialize program
 function init() {
 
 }
+
+writeToFile();
 
 // function call to initialize program
 init();
