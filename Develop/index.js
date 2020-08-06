@@ -59,27 +59,27 @@ console.log("Welcome to the Good README Generator. Simply answer the next series
 inquirer.prompt([
      {
      type: 'input',
-     title: 'title',
+     name: 'title',
      message: '1. What is the title of your project?',
      },
      {
      type: 'input',
-     title: 'motivation', 
+     name: 'motivation', 
      message: '2. What was the motivation for creating this project?',
      },
      {
      type: 'input',
-     title: 'build',
+     name: 'build',
      message: '3. Why did you build this project?',
      },
      {
      type: 'input',
-     title: 'problem',
+     name: 'problem',
      message: '4. What problem does it solve?',
      },
      {
      type: 'input',
-     title: 'learn',
+     name: 'learn',
      message: '5. What did you learn from this project?',
      },
 
