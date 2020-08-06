@@ -49,6 +49,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 console.log("Welcome to the Good README Generator. Simply answer the next series of questions to generate a top-notch README.");
 
@@ -134,9 +135,12 @@ inquirer.prompt([
      console.info(answers.features);
      console.info(answers.git);
      console.info(answers.license);
+     writeToFile('log.txt', generateMarkdown());
 })
 
-/*fs.writeFile("log.txt", JSON.stringify(answers), function(err) {
+function writeToFile(fileName, answers) {
+
+     fs.writeFile("log.txt", answers, function(err) {
 
      if (err) {
        return console.log(err);
@@ -144,19 +148,13 @@ inquirer.prompt([
    
      console.log("Success!");
    
-   });*/
-   
-
-
-function writeToFile(fileName, answers) {
+   });
         }
 
 // function to initialize program
-function init() {
+/*function init() {
 
-}
-
-writeToFile();
+}*/
 
 // function call to initialize program
-init();
+//init();
