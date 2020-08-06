@@ -46,7 +46,10 @@
 9. Walk-through Video - use Screencastify
 */
 
+const inquirer = require('inquirer');
+const fs = require('fs');
 
+console.log("Welcome to the Good README Generator. Simply answer the next series of questions to generate a top-notch README.");
 
 // array of questions for user
 const questions = [
