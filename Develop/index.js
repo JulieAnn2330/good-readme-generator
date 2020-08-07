@@ -138,6 +138,7 @@ inquirer.prompt([
      writeToFile('log.txt', (JSON.stringify(answers)), generateMarkdown());
 })
 
+
 function writeToFile(_generateMarkdown, answers) {
 
      fs.writeFile("log.txt", answers, function(err) {
@@ -152,9 +153,22 @@ function writeToFile(_generateMarkdown, answers) {
         }
 
 // function to initialize program
-function init() {
+/*function init() {
+     inquirer.prompt(message).then((answers) => {
+    fs.appendFileSync('README.md'), ('# ' + answers.title) + '\n', function(err) {
 
+         if (err) {
+           return console.log(err);
+         }
+       
+         console.log("Success!");
+}
+
+})
+     
 }
 
 // function call to initialize program
-init();
+init();*/ 
+
+
