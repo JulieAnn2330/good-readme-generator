@@ -126,19 +126,19 @@ inquirer.prompt([
 ])
 
 .then(answers => {
-     console.info(answers.title);
-     console.info(answers.motivation);
-     console.info(answers.build);
-     console.info(answers.problem);
-     console.info(answers.learn);
-     console.info(answers.standOut);
-     console.info(answers.features);
-     console.info(answers.git);
-     console.info(answers.license);
-     writeToFile('log.txt', generateMarkdown());
+     console.log(answers.title),
+     console.log(answers.motivation),
+     console.log(answers.build),
+     console.log(answers.problem),
+     console.log(answers.learn),
+     console.log(answers.standOut),
+     console.log(answers.features),
+     console.log(answers.git),
+     console.log(answers.license),
+     writeToFile('log.txt', answers, generateMarkdown());
 })
 
-function writeToFile(fileName, answers) {
+function writeToFile(_generateMarkdown, answers) {
 
      fs.writeFile("log.txt", answers, function(err) {
 
@@ -152,9 +152,9 @@ function writeToFile(fileName, answers) {
         }
 
 // function to initialize program
-/*function init() {
+function init() {
 
-}*/
+}
 
 // function call to initialize program
-//init();
+init();
