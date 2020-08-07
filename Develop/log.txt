@@ -1,1 +1,8 @@
-{"title":"t","motivation":"t","build":"t","problem":"t","learn":"t","standOut":"t","features":"t","git":"t","license":"MIT"}
+titleproblem
+motivation
+features
+stand Out
+julieann2330
+lean
+MIT
+build
