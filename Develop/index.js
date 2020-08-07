@@ -135,7 +135,7 @@ inquirer.prompt([
      console.log(answers.features),
      console.log(answers.git),
      console.log(answers.license),
-     writeToFile('log.txt', answers, generateMarkdown());
+     writeToFile('log.txt', (JSON.stringify(answers)), generateMarkdown());
 })
 
 function writeToFile(_generateMarkdown, answers) {

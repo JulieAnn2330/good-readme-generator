@@ -1,1 +1,1 @@
-[object Object]
+{"title":"t","motivation":"t","build":"t","problem":"t","learn":"t","standOut":"t","features":"t","git":"t","license":"MIT"}
