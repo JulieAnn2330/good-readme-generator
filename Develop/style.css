@@ -1,0 +1,36 @@
+body {
+    background-color: white;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    color: black;
+        }
+
+h2 {
+    color: black;
+}
+
+ h3 {
+     color: black;
+     text-decoration: underline;
+ }   
+
+ p {
+     color: black;
+ }
+
+ #top {
+     text-decoration: none;
+   
+ }
+
+ a:link {
+     text-decoration: none;
+ }
+
+ #top {
+    color: green;
+    font-size: 10px;
+ }
