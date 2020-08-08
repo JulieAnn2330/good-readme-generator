@@ -30,7 +30,11 @@ h2 {
      text-decoration: none;
  }
 
- #top {
+ .contents {
+     font-size: 20px;
+ }
+
+ #start {
     color: green;
-    font-size: 10px;
+    font-size: 15px;
  }
