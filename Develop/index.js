@@ -61,42 +61,66 @@ function promptUser() {
           },
           {
           type: 'input',
+          name: 'description',
+          message: '2. Provide a brief description of your project.',
+          },
+          {
+          type: 'input',
           name: 'motivation', 
-          message: '2. What was the motivation for creating this project?',
+          message: '3. What was the motivation for creating this project?',
           },
           {
           type: 'input',
           name: 'build',
-          message: '3. Why did you build this project?',
+          message: '4. Why did you build this project?',
           },
           {
           type: 'input',
           name: 'problem',
-          message: '4. What problem does it solve?',
+          message: '5. What problem does it solve?',
           },
-          {
+                 {
           type: 'input',
           name: 'learn',
-          message: '5. What did you learn from this project?',
+          message: '6. What did you learn from this project?',
           },
           {
           type: 'input',
           name: 'standOut',
-          message: '6. What makes your project stand out?',
+          message: '7. What makes your project stand out?',
           },
           {
           type: 'input',
           name: 'features',
-          message: '7. What features does your project have?',
+          message: '8. What features does your project have?',
+          },
+          {
+          type: 'input',
+          name: 'installation',
+          message: '8. Are there any required steps to insall the project?',
+          },
+          {
+          type: 'input',
+          name: 'use',
+          message: '9. How do you use the project?',
+          },
+          {
+          type: 'input',
+          name: 'contributors',
+          message: '10. Were there any contributors to your project?',
           },
           {
           type: 'input',
           name: 'git',
-          message: '8. What is your GitHub username?',
+          message: '11. What is your GitHub username?',
+          },
+          {type: 'input',
+          name: 'email',
+          message: '12. Provide your email address for questions or comments.',
           },
           {
           type: 'list',
-          message: "9. Which license would you prefer to use? (Choose from list)",
+          message: "13. Which license would you prefer to use? (Choose from list)",
           name: 'license',
           choices:[
           'MIT',
@@ -110,7 +134,7 @@ function promptUser() {
      ])
 }
 
-function gnerateHTML(answers) {
+function generateHTML(answers) {
  return `
  !
  `
