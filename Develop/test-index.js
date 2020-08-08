@@ -174,6 +174,7 @@ inquirer.prompt([
      })
 });
 
+writeToFile('log.txt', (JSON.stringify(answers)), generateMarkdown());
 
      /*console.log(answers.problem),
      console.log(answers.learn),

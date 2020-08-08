@@ -48,174 +48,91 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
-const generateMarkdown = require('./utils/generateMarkdown');
+const writeFileAsync = util.promisify(fs.writeFile);
 
 console.log("Welcome to the Good README Generator. Simply answer the next series of questions to generate a top-notch README.");
 
-// array of questions for user
-/*const questions = [ '1. What is the title of your project?',
-'2. What was the motivation for creating this project?',
-'3. Why did you build this project?',
-'4. What problem does it solve?',
-'5. What did you learn from this project?',
-'6. What makes your project stand out?',
-'7. What features does your project have?',
-'8. What is your GitHub username?',
-'9. What license would you prefer to use? (Choose from list)'
-];
-
-questions.forEach(element => {
-     console.log(element)
-})*/
-
-inquirer.prompt([
-     {
-     type: 'input',
-     name: 'title',
-     message: '1. What is the title of your project?',
-     },
-     {
-     type: 'input',
-     name: 'motivation', 
-     message: '2. What was the motivation for creating this project?',
-     },
-     {
-     type: 'input',
-     name: 'build',
-     message: '3. Why did you build this project?',
-     },
-     {
-     type: 'input',
-     name: 'problem',
-     message: '4. What problem does it solve?',
-     },
-     {
-     type: 'input',
-     name: 'learn',
-     message: '5. What did you learn from this project?',
-     },
-     {
-     type: 'input',
-     name: 'standOut',
-     message: '6. What makes your project stand out?',
-     },
-     {
-     type: 'input',
-     name: 'features',
-     message: '7. What features does your project have?',
-     },
-     {
-     type: 'input',
-     name: 'git',
-     message: '8. What is your GitHub username?',
-     },
-     {
-     type: 'list',
-     message: "9. Which license would you prefer to use? (Choose from list)",
-     name: 'license',
-     choices:[
-     'MIT',
-     'Apache License 2.0',
-     'Boost Software License 1.0',
-     'The Unlicense', 
-     'GNU AGPLv3', 
-     'WTFPL',
-     ],     
-     }
-])
-
-.then(answers => {
-     fs.writeFile('log.txt', (answers.title) + '\n', function(err) {
-          if (err) {
-            return console.log(err);
+function promptUser() {
+     inquirer.prompt([
+          {
+          type: 'input',
+          name: 'title',
+          message: '1. What is the title of your project?',
+          },
+          {
+          type: 'input',
+          name: 'motivation', 
+          message: '2. What was the motivation for creating this project?',
+          },
+          {
+          type: 'input',
+          name: 'build',
+          message: '3. Why did you build this project?',
+          },
+          {
+          type: 'input',
+          name: 'problem',
+          message: '4. What problem does it solve?',
+          },
+          {
+          type: 'input',
+          name: 'learn',
+          message: '5. What did you learn from this project?',
+          },
+          {
+          type: 'input',
+          name: 'standOut',
+          message: '6. What makes your project stand out?',
+          },
+          {
+          type: 'input',
+          name: 'features',
+          message: '7. What features does your project have?',
+          },
+          {
+          type: 'input',
+          name: 'git',
+          message: '8. What is your GitHub username?',
+          },
+          {
+          type: 'list',
+          message: "9. Which license would you prefer to use? (Choose from list)",
+          name: 'license',
+          choices:[
+          'MIT',
+          'Apache License 2.0',
+          'Boost Software License 1.0',
+          'The Unlicense', 
+          'GNU AGPLv3', 
+          'WTFPL',
+          ],     
           }
-     })
-     fs.appendFile('log.txt', (answers.motivation) + '\n', function(err) {
-          if (err) {
-            return console.log(err);
-          }
-     })
-     fs.appendFile('log.txt', (answers.build) + '\n', function(err) {
-          if (err) {
-            return console.log(err);
-          }
-     })
-     fs.appendFile('log.txt', (answers.problem) + '\n', function(err) {
-          if (err) {
-            return console.log(err);
-          }
-     })
-     fs.appendFile('log.txt', (answers.learn) + '\n', function(err) {
-          if (err) {
-            return console.log(err);
-          }
-     })
-     fs.appendFile('log.txt', (answers.standOut) + '\n', function(err) {
-          if (err) {
-            return console.log(err);
-          }
-     })
-     fs.appendFile('log.txt', (answers.features) + '\n', function(err) {
-          if (err) {
-            return console.log(err);
-          }
-     })
-     fs.appendFile('log.txt', (answers.git) + '\n', function(err) {
-          if (err) {
-            return console.log(err);
-          }
-     })
-     fs.appendFile('log.txt', (answers.license) + '\n', function(err) {
-          if (err) {
-            return console.log(err);
-          }
-          console.log("Success!");
-     })
-});
+     ])
+}
+
+function gnerateHTML(answers) {
+ return `
+ !
+ `
 
 
-     /*console.log(answers.problem),
-     console.log(answers.learn),
-     console.log(answers.standOut),
-     console.log(answers.features),
-     console.log(answers.git),
-     console.log(answers.license),
-     writeToFile('log.txt', (JSON.stringify(answers)), generateMarkdown());
-
-
-
-
-function writeToFile(generateMarkdown, answers) {
-
-     fs.writeFile(generateMarkdown, answers, function(err) {
-
-     if (err) {
-       return console.log(err);
-     }
-   
-     console.log("Success!");
-   
-   });
+     
         }
 
 // function to initialize program
-/*function init() {
-     inquirer.prompt(message).then((answers) => {
-    fs.appendFileSync('README.md'), ('# ' + answers.title) + '\n', function(err) {
+function init() {
+    try {
+         const answers = await promptUser();
 
-         if (err) {
-           return console.log(err);
-         }
-       
-         console.log("Success!");
-}
+         const html = generateHTML(answers);
 
-})
-     
+         await writeFileAsync('index.html', html)
+    } catch (err) {
+         console.log(err);
+    }
 }
 
 // function call to initialize program
-init();*/ 
+init(); 
 
 
