@@ -4,21 +4,29 @@ body {
     margin: 0;
 }
 
+hr {
+width: 100%;
+color: slateblue;
+}
+
 h1 {
     color: black;
-        }
+   }
 
 h2 {
     color: black;
+    font-size: 25px;
 }
 
  h3 {
      color: black;
      text-decoration: underline;
+     font-size: 25px;
  }   
 
  p {
      color: black;
+     font-size: 20px;
  }
 
  #top {

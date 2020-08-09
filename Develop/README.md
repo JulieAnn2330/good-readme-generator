@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +8,7 @@
     <title>Good README Generator</title>
 </head>
 <body><a name="top"></a>
-    <h1>${answers.title}</h1>
-
-    <hr color= "slateblue" noshade>
+    <h1>Title</h1>
 
 <h2>Table of Contents:</h2>
 <a href="#description" class="contents">1. Description of Project</><br>
@@ -18,56 +17,41 @@
 <a href="#contributors" class="contents">4. Additional Contributors</a><br>
 <a href="#questions" class="contents">5. Questions or Comments</a><br>
 <a href="#license" class="contents">6. License</a><br>
+
+
 <br>
-
-<hr color= "slateblue" noshade>
-
 <h3 id='description'>Description of Project</h3>
-<p>${answers.description}</p><br>
-<p>${answers.motivation}</p><br>
-<p>${answers.build}</p><br>
-<p>${answers.problem}</p><br>
-<p>${answers.learn}</p><br>
-<p>${answers.standOut}</p><br>
-<p>${answers.features}</p><br>
+<p>Description</p><br>
+<p>Motivation</p><br>
+<p>Build</p><br>
+<p>Problem</p><br>
+<p>Learn</p><br>
+<p>StandOut</p><br>
+<p>Features</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
-<hr color= "slateblue" noshade>
-
 <h3 id='techology'>Technologies Used</h3>
-<p>${answers.technology}</p><br>
+<p>HTML</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
-<hr color= "slateblue" noshade>
-
 <h3 id='installation'>Installation</h3>
-<p>${answers.installation}</p><br>
+<p>Install</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
-<hr color= "slateblue" noshade>
-
-<h3 id='use'>How to Use the Project</h3>
-<p>${answers.use}</p><br>
+<h3 id='use'>How to Use the Project</h3><br>
+<p>Use</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
-<hr color= "slateblue" noshade>
-
 <h3 id='contributors'>Additonal Contributors to the Project</h3>
-<p>${answers.contributors}</p><br>
+<p> Contributors</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
-<hr color= "slateblue" noshade>
-
-<h3 id='questions'>For Questions or Comments</h3>
-<p>Please contact me at ${answers.git } or ${answers.email }</p><br>
+<h3 id='questions'>For Questions or Comments</h3><br>
+<p>Please contact me at julieann.2330 or julie.schaub@midtownfullstack.com</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
-<hr color= "slateblue" noshade>
-
-<h3 id='license'>License</h3>
-<p>${answers.license}</p>
+<h3 id='license'>License</h3><br>
+<p> MIT</p>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
-
-    
 </body>
-</html>
+</html> 

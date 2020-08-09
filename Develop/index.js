@@ -48,57 +48,59 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
-const writeFileAsync = util.promisify(fs.writeFile);
+const util = require("util");
 
 console.log("Welcome to the Good README Generator. Simply answer the next series of questions to generate a top-notch README.");
 
+const writeFileAsync = util.promisify(fs.writeFile);
+
 function promptUser() {
-     inquirer.prompt([
+     return inquirer.prompt([
           {
           type: 'input',
           name: 'title',
-          message: '1. What is the title of your project?',
+          message: '1. What is the title of your project?'
           },
           {
           type: 'input',
           name: 'description',
-          message: '2. Provide a brief description of your project.',
+          message: '2. Provide a brief description of your project.'
           },
           {
           type: 'input',
           name: 'motivation', 
-          message: '3. What was the motivation for creating this project?',
+          message: '3. What was the motivation for creating this project?'
           },
           {
           type: 'input',
           name: 'build',
-          message: '4. Why did you build this project?',
+          message: '4. Why did you build this project?'
           },
           {
           type: 'input',
           name: 'problem',
-          message: '5. What problem does it solve?',
+          message: '5. What problem does it solve?'
           },
                  {
           type: 'input',
           name: 'learn',
-          message: '6. What did you learn from this project?',
+          message: '6. What did you learn from this project?'
           },
           {
           type: 'input',
           name: 'standOut',
-          message: '7. What makes your project stand out?',
+          message: '7. What makes your project stand out?'
           },
           {
           type: 'input',
           name: 'features',
-          message: '8. What features does your project have?',
+          message: '8. What features does your project have?'
           },
           {
           type: 'checkbox',
-          name: 'technology',
           message: '9. What technologies does your project incorporate?',
-          list: [
+          name: 'technology',
+          choices: [
                'HTML',
                'CSS',
                'Bootstrap',
@@ -109,31 +111,30 @@ function promptUser() {
                'AJAX',
                'node.js',
                'mySQL',
-          ]
-          },
+          ]},
           {
           type: 'input',
           name: 'installation',
-          message: '10. Are there any required steps to insall the project?',
+          message: '10. Are there any required steps to insall the project?'
           },
           {
           type: 'input',
           name: 'use',
-          message: '11.. How do you use the project?',
+          message: '11. How do you use the project?'
           },
           {
           type: 'input',
           name: 'contributors',
-          message: '12. Were there any contributors to your project?',
+          message: '12. Were there any contributors to your project?'
           },
           {
           type: 'input',
           name: 'git',
-          message: '13. What is your GitHub username?',
+          message: '13. What is your GitHub username?'
           },
           {type: 'input',
           name: 'email',
-          message: '14. Provide your email address for questions or comments.',
+          message: '14. Provide your email address for questions or comments.'
           },
           {
           type: 'list',
@@ -146,28 +147,98 @@ function promptUser() {
           'The Unlicense', 
           'GNU AGPLv3', 
           'WTFPL',
-          ],     
-          }
+          ]    
+          } 
      ])
+};
+
+function generateREADME(answers) {
+ return `
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Good README Generator</title>
+</head>
+<body><a name="top"></a>
+    <h1>${answers.title}</h1>
+
+    <hr color= "slateblue" noshade>
+
+<h2>Table of Contents:</h2>
+<a href="#description" class="contents">1. Description of Project</><br>
+<a href="#technology" class="contents">2. Technologies Used</a><br>
+<a href="#use" class="contents">3. How to Use the Project</a><br>
+<a href="#contributors" class="contents">4. Additional Contributors</a><br>
+<a href="#questions" class="contents">5. Questions or Comments</a><br>
+<a href="#license" class="contents">6. License</a><br>
+<br>
+
+<hr color= "slateblue" noshade>
+
+<h3 id='description'>Description of Project</h3>
+<p>${answers.description}</p><br>
+<p>${answers.motivation}</p><br>
+<p>${answers.build}</p><br>
+<p>${answers.problem}</p><br>
+<p>${answers.learn}</p><br>
+<p>${answers.standOut}</p><br>
+<p>${answers.features}</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
+
+<h3 id='techology'>Technologies Used</h3>
+<p>${answers.technology}</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
+
+<h3 id='installation'>Installation</h3>
+<p>${answers.installation}</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
+
+<h3 id='use'>How to Use the Project</h3>
+<p>${answers.use}</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
+
+<h3 id='contributors'>Additonal Contributors to the Project</h3>
+<p>${answers.contributors}</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
+
+<h3 id='questions'>For Questions or Comments</h3>
+<p>Please contact me at ${answers.git } or ${answers.email }</p><br>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+<br>
+<hr color= "slateblue" noshade>
+
+<h3 id='license'>License</h3>
+<p>${answers.license}</p>
+<a href="#top" id="start">(Back to Top of Page)</a><br>
+
+    
+</body>
+</html> `;
 }
 
-function generateHTML(answers) {
- return `
- !
- `
-
-
-     
-        }
-
 // function to initialize program
-function init() {
+async function init() {
     try {
          const answers = await promptUser();
 
-         const html = generateHTML(answers);
+         const readMe = generateREADME(answers);
 
-         await writeFileAsync('index.html', html)
+         await writeFileAsync('README.md', readMe);
+         console.log('Successfully written to README.md');
+         
     } catch (err) {
          console.log(err);
     }
