@@ -124,30 +124,24 @@ function promptUser() {
           },
           {
           type: 'input',
-          name: 'contributors',
-          message: '12. Were there any contributors to your project?'
-          },
-          {
-          type: 'input',
           name: 'git',
-          message: '13. What is your GitHub username?'
+          message: '12. What is your GitHub username?'
           },
           {type: 'input',
           name: 'email',
-          message: '14. Provide your email address for questions or comments.'
+          message: '13. Provide your email address for questions or comments.'
           },
           {
           type: 'list',
-          message: "15. Which license would you prefer to use?",
+          message: "14. Which license would you prefer to use?",
           name: 'license',
           choices:[
-          'MIT',
-          'Apache License 2.0',
-          'Boost Software License 1.0',
-          'The Unlicense', 
-          'GNU AGPLv3', 
-          'WTFPL',
-          ]    
+          { title:'https://opensource.org/licenses/MIT', value: 'MIT' },
+          { title: 'https://opensource.org/licenses/Apache-2.0', value: 'Apache License 2.0'},
+          { title: 'https://opensource.org/licenses/BSL-1.0', value: 'Boost Software License 1.0'},
+          { title: 'https://opensource.org/licenses/unlicense', value: 'The Unlicense'}, 
+          { title: 'https://opensource.org/licenses/AGPL-3.0', value: 'GNU AGPLv3'} 
+          ],    
           } 
      ])
 };
@@ -163,15 +157,15 @@ function generateREADME(answers) {
     <title>Good README Generator</title>
 </head>
 <body><a name="top"></a>
-    <h1>${answers.title}</h1>
+    <h1>${answers.title}</h1><br>
 
-    <hr color= "slateblue" noshade>
+<hr color= "slateblue" noshade>
 
 <h2>Table of Contents:</h2>
 <a href="#description" class="contents">1. Description of Project</><br>
 <a href="#technology" class="contents">2. Technologies Used</a><br>
 <a href="#use" class="contents">3. How to Use the Project</a><br>
-<a href="#contributors" class="contents">4. Additional Contributors</a><br>
+<a href="#contributors" class="contents">4. Contributing</a><br>
 <a href="#questions" class="contents">5. Questions or Comments</a><br>
 <a href="#license" class="contents">6. License</a><br>
 <br>
@@ -208,14 +202,16 @@ function generateREADME(answers) {
 <br>
 <hr color= "slateblue" noshade>
 
-<h3 id='contributors'>Additonal Contributors to the Project</h3>
-<p>${answers.contributors}</p><br>
+<h3 id='contributors'>Contributing to the Project</h3>
+<p>Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
 
 <h3 id='questions'>For Questions or Comments</h3>
-<p>Please contact me at ${answers.git } or ${answers.email }</p><br>
+<p>Please contact me at ${answers.git } or ${answers.email } for questions or comments.</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
