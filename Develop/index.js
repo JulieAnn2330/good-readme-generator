@@ -153,7 +153,7 @@ function generateREADME(answers) {
 <body>
 <div id = "top">
 
-<h2 class = "title">${answers.title}</h2>
+<h2>${answers.title}</h2> <img src= 'https://img.shields.io/badge/License-${answers.license}-blue.svg'></img><br>
 
 <hr color= "slateblue" noshade>
 
