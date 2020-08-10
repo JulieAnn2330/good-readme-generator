@@ -133,8 +133,8 @@ function promptUser() {
           choices:[
           'MIT',
           'ISC',
-          'W3C',
-          'The Unlicense'  
+          'Unlicense', 
+          'W3C'           
           ],    
           } 
      ])
@@ -153,7 +153,7 @@ function generateREADME(answers) {
 <body>
 <div id = "top">
 
-<h2>${answers.title}</h2> <img src= 'https://img.shields.io/badge/License-${answers.license}-blue.svg'></img><br>
+<h2>${answers.title}</h2> <a href="#license"><img src= "https://img.shields.io/badge/License-${answers.license}-blue.svg"></a><br>
 
 <hr color= "slateblue" noshade>
 
@@ -162,7 +162,7 @@ function generateREADME(answers) {
 <a href="#technology" class="contents">2. Technologies Used</a><br>
 <a href="#installation" class="contents">3. Installation Directions</a><br>
 <a href="#use" class="contents">4. How to Use the Project</a><br>
-<a href="#contributors" class="contents">5. Contributing</a><br>
+<a href="#contributors" class="contents">5. Contributing</a><br> 
 <a href="#questions" class="contents">6. Questions or Comments</a><br>
 <a href="#license" class="contents">7. License</a><br>
 <br>
