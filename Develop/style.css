@@ -9,8 +9,9 @@ width: 100%;
 color: slateblue;
 }
 
-h1 {
+.title {
     color: black;
+    font-size: 30px;
    }
 
 h2 {

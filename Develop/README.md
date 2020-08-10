@@ -7,48 +7,46 @@
     <link rel="stylesheet" href="style.css">
     <title>Good README Generator</title>
 </head>
-<body><a name="top"></a>
-    <h1>t</h1><br>
+<body>
+<div id = "top">
+
+<h2 class = "title">Good README Generator</h2>
 
 <hr color= "slateblue" noshade>
 
 <h2>Table of Contents:</h2>
 <a href="#description" class="contents">1. Description of Project</><br>
 <a href="#technology" class="contents">2. Technologies Used</a><br>
-<a href="#use" class="contents">3. How to Use the Project</a><br>
-<a href="#contributors" class="contents">4. Contributing</a><br>
-<a href="#questions" class="contents">5. Questions or Comments</a><br>
-<a href="#license" class="contents">6. License</a><br>
+<a href="#installation" class="contents">3. Installation Directions</a><br>
+<a href="#use" class="contents">4. How to Use the Project</a><br>
+<a href="#contributors" class="contents">5. Contributing</a><br>
+<a href="#questions" class="contents">6. Questions or Comments</a><br>
+<a href="#license" class="contents">7. License</a><br>
 <br>
 
 <hr color= "slateblue" noshade>
 
 <h3 id='description'>Description of Project</h3>
-<p>t</p><br>
-<p>t</p><br>
-<p>t</p><br>
-<p>t</p><br>
-<p>t</p><br>
-<p>t</p><br>
-<p>t</p><br>
+<p>j j j j j j</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
 
 <h3 id='techology'>Technologies Used</h3>
-<p>HTML</p><br>
+<p>This project incoporates the following tecnologies:<br>
+HTML</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
 
 <h3 id='installation'>Installation</h3>
-<p>t</p><br>
+<p>j</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
 
 <h3 id='use'>How to Use the Project</h3>
-<p>t</p><br>
+<p>j</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
@@ -62,13 +60,13 @@ Please make sure to update tests as appropriate.</p><br>
 <hr color= "slateblue" noshade>
 
 <h3 id='questions'>For Questions or Comments</h3>
-<p>Please contact me at t or t for questions or comments.</p><br>
+<p>Please contact me at github.com/j or j for questions or comments.</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
 
 <h3 id='license'>License</h3>
-<p>MIT</p>
+<p>This project incorporates the following license: <a href="https://opensource.org/licenses/MIT">MIT</a></p>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 
     
