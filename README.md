@@ -28,7 +28,7 @@
 <hr color= "slateblue" noshade>
 
 <h3 id ="screenshots">Screenshots of Project</h3>
-(https://user-images.githubusercontent.com/64329660/89853670-906e3200-db57-11ea-85fe-281b0ba537d4.png)
+<p><img src= "../good-readme-generator/Assets/Screenshot-1.PNG"></p><br>
 
 <hr color= "slateblue" noshade>
 
