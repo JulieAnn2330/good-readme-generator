@@ -6,22 +6,28 @@
     <link rel="stylesheet" href="style.css">
     <title>Good README Generator</title>
 </head>
-<body><a name="top"></a>
-    <h1>${answers.title}</h1> <img src= "https://img.shields.io/badge/License-${answers.license}-blue.svg"></img><br>
+<body>
+<div id = "top">
+
+<h2>${answers.title}</h2> <a href="#license"><img src= "https://img.shields.io/badge/License-${answers.license}-blue.svg"></a><br>
 
 <hr color= "slateblue" noshade>
 
 <h2>Table of Contents:</h2>
-<a href="#description" class="contents">1. Description of Project</a><br>
-    <a href="#technology" class="contents">2. Technologies Used</a><br>
-    <a href="#installation" class="contents">3. Installation Directions</a><br>
-    <a href="#use" class="contents">4. How to Use the Project</a><br>
-    <a href="#contributors" class="contents">5. Contributing</a><br>
-    <a href="#questions" class="contents">6. Questions or Comments</a><br>
-    <a href="#license" class="contents">7. License</a><br>
+<a href="#screenshots" class="contents">1. Screenshots of Project</><br>
+<a href="#description" class="contents">2. Description of Project</><br>
+<a href="#technology" class="contents">3. Technologies Used</a><br>
+<a href="#installation" class="contents">4. Installation Directions</a><br>
+<a href="#use" class="contents">5. How to Use the Project</a><br>
+<a href="#contributors" class="contents">6. Contributing</a><br> 
+<a href="#questions" class="contents">7. Questions or Comments</a><br>
+<a href="#license" class="contents">8. License</a><br>
 <br>
 
 <hr color= "slateblue" noshade>
+
+<h3 id ="screenshots">Screenshots of Project</h3>
+<p><img src= "../Assets/Screenshot-1.PNG"></p>
 
 <h3 id='description'>Description of Project</h3>
 <p>${answers.description} ${answers.motivation} ${answers.problem} ${answers.learn} ${answers.standOut} ${answers.features}</p><br>
@@ -30,7 +36,8 @@
 <hr color= "slateblue" noshade>
 
 <h3 id='techology'>Technologies Used</h3>
-<p>${answers.technology}</p><br>
+<p>This project incoporates the following tecnologies:<br>
+${answers.technology}</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
@@ -56,13 +63,13 @@ Please make sure to update tests as appropriate.</p><br>
 <hr color= "slateblue" noshade>
 
 <h3 id='questions'>For Questions or Comments</h3>
-<p>Please contact me at ${answers.git } or ${answers.email } for questions or comments.</p><br>
+<p>Please contact me at github.com/${answers.git } or ${answers.email } for questions or comments.</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
 
 <h3 id='license'>License</h3>
-<p>${answers.license}</p>
+<p>This project incorporates the following license: <a href="https://opensource.org/licenses/${answers.license}">${answers.license}</a></p>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 
     

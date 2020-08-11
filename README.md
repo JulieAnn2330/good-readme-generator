@@ -15,19 +15,25 @@
 <hr color= "slateblue" noshade>
 
 <h2>Table of Contents:</h2>
-<a href="#description" class="contents">1. Description of Project</><br>
-<a href="#technology" class="contents">2. Technologies Used</a><br>
-<a href="#installation" class="contents">3. Installation Directions</a><br>
-<a href="#use" class="contents">4. How to Use the Project</a><br>
-<a href="#contributors" class="contents">5. Contributing</a><br> 
-<a href="#questions" class="contents">6. Questions or Comments</a><br>
-<a href="#license" class="contents">7. License</a><br>
+<a href="#screenshots" class="contents">1. Screenshots of Project</><br>
+<a href="#description" class="contents">2. Description of Project</><br>
+<a href="#technology" class="contents">3. Technologies Used</a><br>
+<a href="#installation" class="contents">4. Installation Directions</a><br>
+<a href="#use" class="contents">5. How to Use the Project</a><br>
+<a href="#contributors" class="contents">6. Contributing</a><br> 
+<a href="#questions" class="contents">7. Questions or Comments</a><br>
+<a href="#license" class="contents">8. License</a><br>
 <br>
 
 <hr color= "slateblue" noshade>
 
+<h3 id ="screenshots">Screenshots of Project</h3>
+<p><img src= "../good-readme-generator/Assets/Screenshot-1.PNG"></p><br>
+
+<hr color= "slateblue" noshade>
+
 <h3 id='description'>Description of Project</h3>
-<p>This project prompts a user through a series of questions designed to discover details about their project, then compiles it all into a good README.md file suitable for GitHub. I am not very good at writing READMEs. Having a templated format with pre-written questions that I can answer reduces the stress of writing one. This project is great for users who don't know where to start on their README or who are looking for a way to save time writing one. I learned a lot about promises and async functions working on this project. This project stands out due to the clean code on the backend and the functional styling on the frontend. This project features a series of prompts for the questions and asynchronous processing.</p><br>
+<p>This project prompts a user through a series of questions designed to discover details about their project, then compiles it all into a good README.md file suitable for GitHub. I am not very good at writing READMEs. Having a templated format with pre-written questions that I can answer reduces the stress of writing one. This project is great for users who don't know where to start on their README or who are looking for a way to save time when writing one. I learned a lot about promises and async functions working on this project. This project stands out due to the clean code on the backend and the functional styling on the frontend. This project features a series of prompts using node.js for the questions and asynchronous processing.</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
@@ -46,7 +52,7 @@ HTML,CSS,JavaScript,node.js</p><br>
 <hr color= "slateblue" noshade>
 
 <h3 id='use'>How to Use the Project</h3>
-<p>To use the project, open the Good-README-Generator folder and then open the index.js file. In terminal type in node index.js to run the program. Users will input their responses or choose from a list. Once all of the questions are answered, the user will push the README.md file to GitHub using the typical git commands (add ., commit -m, push).</p><br>
+<p>To use the project, open the Good-README-Generator folder and then open the index.js file. In terminal type in node index.js to run the program. Users will input their responses or choose from a list. To insert the screenshot, the user will need to type in the full filepath for the saved image (example: ..//good-readme-generator/Assets/Screenshot-1.PNG), quotes are not needed around the entered filepath. Once all of the questions are answered, the user will push the README.md file to GitHub using the typical git commands (git add ., git commit -m, git push).</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
