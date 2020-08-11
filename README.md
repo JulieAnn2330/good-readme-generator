@@ -47,7 +47,7 @@ HTML,CSS,JavaScript,node.js</p><br>
 <hr color= "slateblue" noshade>
 
 <h3 id='use'>How to Use the Project</h3>
-<p>To use the project, open the Good-README-Generator folder and then open the index.js file. In terminal type in node index.js to run the program. Users will input their responses or choose from a list. Once all of the questions are answered, the user will push the README.md file to GitHub using the typical git commands (git add ., git commit -m, git push). Screenshots can be added after the project has been pushed to GitHub. Users can paste their screenshots at the bottom of the page, outside of the HTML formatting.</p><br>
+<p>To use the project, open the Good-README-Generator folder and then open the index.js file. In terminal type in node index.js to run the program. Users will input their responses or choose from. Once all of the questions are answered, the user will push the README.md file to GitHub using the typical git commands (git add., git commit -m, git push). Screenshots can be added directly to the README in GitHub. Users should paste their link to the screenshot  after the end HTML tag.</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
