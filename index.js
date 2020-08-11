@@ -63,42 +63,37 @@ function promptUser() {
           },
           {
           type: 'input',
-          name: 'screenshot',
-          message: '2. Paste a link to one screenshot of your project here. (Must include the full filepath to the saved image, without quotes (ex: ../good-readme-generator/Assets/Screenshot-1.PNG).'
-          },
-          {
-          type: 'input',
           name: 'description',
-          message: '3. Provide a brief description of your project.'
+          message: '2. Provide a brief description of your project.'
           },
           {
           type: 'input',
           name: 'motivation', 
-          message: '4. What was the motivation for creating this project?'
+          message: '3. What was the motivation for creating this project?'
           },
           {
           type: 'input',
           name: 'problem',
-          message: '5. What problem does it solve?'
+          message: '4. What problem does it solve?'
           },
           {
           type: 'input',
           name: 'learn',
-          message: '6. What did you learn from this project?'
+          message: '5. What did you learn from this project?'
           },
           {
           type: 'input',
           name: 'standOut',
-          message: '7. What makes your project stand out?'
+          message: '6. What makes your project stand out?'
           },
           {
           type: 'input',
           name: 'features',
-          message: '8. What features does your project have?'
+          message: '7. What features does your project have?'
           },
           {
           type: 'checkbox',
-          message: '9. What technologies does your project incorporate? (Choose from list and hit enter to advance)',
+          message: '8. What technologies does your project incorporate? (Choose from list and hit enter to advance)',
           name: 'technology',
           choices: [
                'HTML',
@@ -115,25 +110,25 @@ function promptUser() {
           {
           type: 'input',
           name: 'installation',
-          message: '10. Are there any required steps to insall the project?'
+          message: '9. Are there any required steps to insall the project?'
           },
           {
           type: 'input',
           name: 'use',
-          message: '11. How do you use the project?'
+          message: '10. How do you use the project?'
           },
           {
           type: 'input',
           name: 'git',
-          message: '12. What is your GitHub username?'
+          message: '11. What is your GitHub username?'
           },
           {type: 'input',
           name: 'email',
-          message: '13. Provide your email address for questions or comments.'
+          message: '12. Provide your email address for questions or comments.'
           },
           {
           type: 'list',
-          message: "14. Which license would you prefer to use? (Hit enter to select)",
+          message: "13. Which license would you prefer to use? (Hit enter to select)",
           name: 'license',
           choices:[
           'MIT',
@@ -163,20 +158,15 @@ function generateREADME(answers) {
 <hr color= "slateblue" noshade>
 
 <h2>Table of Contents:</h2>
-<a href="#screenshots" class="contents">1. Screenshots of Project</><br>
-<a href="#description" class="contents">2. Description of Project</><br>
-<a href="#technology" class="contents">3. Technologies Used</a><br>
-<a href="#installation" class="contents">4. Installation Directions</a><br>
-<a href="#use" class="contents">5. How to Use the Project</a><br>
-<a href="#contributors" class="contents">6. Contributing</a><br> 
-<a href="#questions" class="contents">7. Questions or Comments</a><br>
-<a href="#license" class="contents">8. License</a><br>
+<a href="#description" class="contents">1. Description of Project</><br>
+<a href="#technology" class="contents">2. Technologies Used</a><br>
+<a href="#installation" class="contents">3. Installation Directions</a><br>
+<a href="#use" class="contents">4. How to Use the Project</a><br>
+<a href="#contributors" class="contents">5. Contributing</a><br> 
+<a href="#questions" class="contents">6. Questions or Comments</a><br>
+<a href="#license" class="contents">7. License</a><br>
+<a href="#screenshot" class="contents">8. Screenshots of Project</><br>
 <br>
-
-<hr color= "slateblue" noshade>
-
-<h3 id ="screenshots">Screenshots of Project</h3>
-<p><img src= "${answers.screenshot}"></p><br>
 
 <hr color= "slateblue" noshade>
 
@@ -223,6 +213,9 @@ Please make sure to update tests as appropriate.</p><br>
 <p>This project incorporates the following license: <a href="https://opensource.org/licenses/${answers.license}">${answers.license}</a></p>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 
+<hr color= "slateblue" noshade>
+
+<h3 id='screenshot'>Screenshots</h3>
     
 </body>
 </html> `;
