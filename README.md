@@ -63,7 +63,7 @@ Please make sure to update tests as appropriate.</p><br>
 <hr color= "slateblue" noshade>
 
 <h3 id='questions'>For Questions or Comments</h3>
-<p>Please contact me at github.com/JulieAnn2330 or julie.batsonb@midtownfullstack.com for questions or comments.</p><br>
+<p>Please contact me at github.com/JulieAnn2330 or julie.batson@midtownfullstack.com for questions or comments.</p><br>
 <a href="#top" id="start">(Back to Top of Page)</a><br>
 <br>
 <hr color= "slateblue" noshade>
